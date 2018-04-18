@@ -14,7 +14,7 @@ MongoClient.connect(url, function(err, databse){
 });
 
 app.get('/all', function(req, res){
-  db.collection('quotes').find().toArray(function(err, results){
+  db.collection('quotes').find().toArray(function(err, result){
     if (err) throw err;
 
     var output = "<h1>All the quotes</h1>";
