@@ -4,7 +4,7 @@ var app = express();
 
 app.use(express.static("public"));
 
-app.get('/getForm', function(reqs, res){
+app.get('/getForm', function(req, res){
   var name = req.query.name;
   var quest = req.query.quest;
     res.send("Hi " +name+" I am sure you will" + quest);
