@@ -8,14 +8,14 @@ app.use(express.static('public'))
 var db;
 
 MongoClient.connect(url, function(err, databse){
-  if(err) throw err;
+  if (err) throw err;
   db = database;
   app.listen(8080);
 });
 
 app.get('/all', function(req, res){
   db.collection('quotes').find().toArray(function(err, results){
-    if(err) throw err;
+    if (err) throw err;
 
     var output = "<h1>All the quotes</h1>";
 
