@@ -16,8 +16,8 @@ app.get('/joke', function(req, res){
 });
 
 app.get('/add', function(req, res){
-  var x = parseInt(5)req.query.x;
-  var y = parseInt(50)req.query.y;
+  var x = parseInt(req.query.x);
+  var y = parseInt(req.query.y);
   res.send("X + Y=" +(x+y));
 
 });
