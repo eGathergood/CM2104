@@ -4,6 +4,12 @@ var app = express();
 
 app.use(express.static("public"));
 
+app.get('/getForm', function(reqs, res){
+  var name = req.query.name;
+  var quest = req.query.quest;
+    res.send("Hi " +name+" I am sure you will" + quest);
+})
+
 app.get('/', function(req, res){
   res.send("This works i think - express");
 });
