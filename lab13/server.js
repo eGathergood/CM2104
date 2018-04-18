@@ -6,11 +6,11 @@ app.get('/', function(req, res){
   res.send("This works i think - express");
 });
 
-app.get('/', function(req, res){
+app.get('/test', function(req, res){
   res.send("Route 2");
 });
 
-app.get('/', function(req, res){
+app.get('/joke', function(req, res){
   var randomJoke = knockknock()
   res.send(randomJoke);
 });
